@@ -13,4 +13,4 @@ def predict_image(model_path, image_path, img_size=(150, 150)):
     
     # Vorhersage
     prediction = model.predict(img_array)
-    return ["Surrealism" if prediction[0][0] > 0.5 else "Bauhaus", prediction[0][0]]
+    return ["Surrealism" if prediction[0][0] > 0.5 else "Bauhaus", (prediction[0][0]) if prediction[0][0] > 0.5 else (1-prediction[0][0])]
