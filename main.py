@@ -15,5 +15,6 @@ if __name__ == "__main__":
   # train_model(DATA_DIR, MODEL_PATH, epochs=10)
 
   # Testen mit einem neuen Bild
-  arr = predict_image(MODEL_PATH, image_path_1)
-  print(f"The predicted class is: {arr[0]}, with an accurracy of {arr[1]}")
+  arr = predict_image(MODEL_PATH, image_path_2)
+
+  print(f"The predicted class is: {arr[0]}, with an accurracy of {arr[1]*100:.2f} %")
